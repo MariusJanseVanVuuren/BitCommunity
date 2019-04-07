@@ -1,8 +1,8 @@
 <?php
 
-namespace BitCommunity\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use BitCommunity\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller

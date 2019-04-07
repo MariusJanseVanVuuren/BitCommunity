@@ -580,11 +580,23 @@ pre code {
 }
 
 .container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+    width: 100%;
+    height: 2rem;
+    margin: auto;
+}
+
+.one {
+    width: 25%;
+    float: left;
+}
+.two {
+    margin-left: 25%;
+}
+
+.fancy-underline {
+  font-size: 1.35em;
+  border-bottom: 3px solid black;
+  border-color: #55B3F1;
 }
 
 @media (min-width: 576px) {
@@ -599,10 +611,23 @@ pre code {
   }
 }
 
+@media (max-width: 576px) {
+
+  .one {
+    margin-left: 25%;
+    width: 50%;
+  }
+  .two {
+      width: 100%;
+      margin: auto;
+  }
+}
+
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
   }
+
 }
 
 @media (min-width: 1200px) {

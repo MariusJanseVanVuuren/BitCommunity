@@ -50,15 +50,33 @@
                 font-weight: bold;
             }
 
-            .links > a {
-                color: #ffffff;
-                padding: 0 25px;
-                font-size: 13px;
+            a {
+                border-radius: 2rem;
+                color: #fff;
+                padding-right: 1.5rem;
+                padding-left: 1.5rem;
+                padding-top: 0.3rem;
+                padding-bottom: 0.3rem;
+                background-color: #55B3F1;
+                border-color: #55B3F1;
+                -webkit-box-shadow: 2px 2px 1px -1px rgba(0,0,0,0.2);
+                -moz-box-shadow: 2px 2px 1px -1px rgba(0,0,0,0.2);
+                box-shadow: 2px 2px 1px -1px rgba(0,0,0,0.2);
+                font-size: 1em;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
             }
+
+            .links:hover {
+              background-color: #227dc7;
+            }
+
+            .links:focus {
+              box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
+            }
+
 
             .m-b-md {
                 margin-bottom: 30px;
@@ -68,13 +86,13 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a class="links" href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a class="links" href="{{ route('login') }}">Login</a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a class="links" href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
                 </div>

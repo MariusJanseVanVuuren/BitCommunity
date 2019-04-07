@@ -1,6 +1,6 @@
 <?php
 
-namespace BitCommunity\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
