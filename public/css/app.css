@@ -472,6 +472,53 @@ mark,
   background-color: #fcf8e3;
 }
 
+.title {
+    font-size: 6em;
+    color: #3F598C;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-size: 1em;
+    color: #3F598C;
+    font-weight: bold;
+}
+
+@media (min-width: 300px) {
+  .top-right {
+      position: absolute;
+      right: auto;
+      top: 18px;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 992px) {
+  .title {
+    font-size: 5em;
+  }
+  .top-right {
+      position: absolute;
+      right: 10px;
+      top: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 6em;
+  }
+}
+
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -2581,6 +2628,25 @@ textarea.form-control.is-invalid {
 a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none;
+}
+
+.href-primary {
+    border-radius: 2rem;
+    color: #fff;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    background-color: #55B3F1;
+    border-color: #55B3F1;
+    -webkit-box-shadow: 2px 2px 1px -1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 2px 2px 1px -1px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 1px -1px rgba(0,0,0,0.2);
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .btn-primary {

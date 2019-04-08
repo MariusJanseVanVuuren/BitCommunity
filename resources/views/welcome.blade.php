@@ -44,47 +44,6 @@
                 text-align: center;
             }
 
-            .title {
-                font-size: 6em;
-                color: #3F598C;
-                font-weight: bold;
-            }
-
-            @media (min-width: 300px) {
-              .top-right {
-                  position: absolute;
-                  right: auto;
-                  top: 18px;
-              }
-
-              .title {
-                font-size: 2em;
-              }
-            }
-
-            @media (min-width: 768px) {
-              .title {
-                font-size: 3em;
-              }
-            }
-
-            @media (min-width: 992px) {
-              .title {
-                font-size: 5em;
-              }
-              .top-right {
-                  position: absolute;
-                  right: 10px;
-                  top: 18px;
-              }
-            }
-
-            @media (min-width: 1200px) {
-              .title {
-                font-size: 6em;
-              }
-            }
-
             a {
                 border-radius: 2rem;
                 color: #fff;
@@ -123,9 +82,9 @@
             @if (Route::has('login'))
                 <div class="top-right">
                     @auth
-                        <a class="links" href="{{ url('/home') }}">Home</a>
+                        <a class="href-primary links" href="{{ url('/home') }}">Home</a>
                     @else
-                        <a class="links" href="{{ route('login') }}">Login</a>
+                        <a class="href-primary links" href="{{ route('login') }}">Login</a>
                         @if (Route::has('register'))
                             <a class="links" href="{{ route('register') }}">Register</a>
                         @endif

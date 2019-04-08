@@ -30,3 +30,27 @@ Route::get('/profile', [
     'as' => 'profile.view',
     'middleware' => 'auth'
 ]);
+
+Route::get('/edit_profile', [
+    'uses' => 'ProfileController@edit',
+    'as' => 'profile.edit',
+    'middleware' => 'auth'
+]);
+
+Route::post('/update_profile', [
+    'uses' => 'ProfileController@update',
+    'as' => 'profile.update',
+    'middleware' => 'auth'
+]);
+
+Route::get('/reset_password', [
+    'uses' => 'ProfileController@changePassword',
+    'as' => 'profile.change_password',
+    'middleware' => 'auth'
+]);
+
+Route::post('/update_password', [
+    'uses' => 'ProfileController@updatePassword',
+    'as' => 'profile.update_password',
+    'middleware' => 'auth'
+]);
