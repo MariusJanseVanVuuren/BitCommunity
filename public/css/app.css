@@ -587,7 +587,6 @@ pre code {
 
 .one {
     width: 25%;
-    float: left;
 }
 .two {
     margin-left: 25%;
@@ -612,7 +611,9 @@ pre code {
 }
 
 @media (max-width: 576px) {
-
+  .container {
+    max-width: 100%;
+  }
   .one {
     margin-left: 25%;
     width: 50%;
@@ -624,6 +625,11 @@ pre code {
 }
 
 @media (min-width: 992px) {
+  .one {
+    
+    float: left;
+  }
+
   .container {
     max-width: 960px;
   }
