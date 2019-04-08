@@ -2,8 +2,10 @@
 - Install Laravel
 - Installl valet  or place the folder into your Xammp htt docs
 - Install mysql
-- run php artisan migrate
-
+- Run composer install or php composer.phar install
+- Run php artisan key:generate
+- Run php artisan migrate
+- Run php artisan serve
 - You can see the basic layout for the app here:
 
 https://bitcubecommunity.herokuapp.com
