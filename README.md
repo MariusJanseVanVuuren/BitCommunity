@@ -1,3 +1,17 @@
+# Project Setup
+- Install Laravel
+- Installl valet  or place the folder into your Xammp htt docs
+- Install mysql
+- run php artisan migrate
+
+- You can see the basic layout for the app here:
+
+https://bitcubecommunity.herokuapp.com
+
+http://bitcubecommunity.herokuapp.com/login
+
+
+# Laravel
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
