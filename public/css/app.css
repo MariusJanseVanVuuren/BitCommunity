@@ -4842,6 +4842,31 @@ input[type=button].btn-block {
   background-image: linear-gradient(-90deg, #5F74DE, #60C8E3);
 }
 
+.post {
+  word-wrap: break-word;
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 2px 2px 1px -1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 2px 2px 1px -1px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 1px -1px rgba(0,0,0,0.2);
+}
+
+.post-header {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #3F598C;
+  border-bottom: 1px solid #60C8E3;
+  border-top-left-radius:1rem;
+  border-top-right-radius:1rem;
+}
+
+.post-body {
+  margin-top: 1rem;
+}
+
 .card-header + .list-group .list-group-item:first-child {
   border-top: 0;
 }

@@ -17,4 +17,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'PostController@index')->name('home');
+
+Route::post('/createpost', [
+    'uses' => 'PostController@postCreatePost',
+    'as' => 'post.create',
+    'middleware' => 'auth'
+]);
+
+Route::get('/profile', [
+    'uses' => 'ProfileController@view',
+    'as' => 'profile.view',
+    'middleware' => 'auth'
+]);
