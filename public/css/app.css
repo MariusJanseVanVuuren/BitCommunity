@@ -598,9 +598,9 @@ pre code {
   border-color: #55B3F1;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 376px) {
   .container {
-    max-width: 540px;
+    max-width: 100%;
   }
 }
 
@@ -611,9 +611,6 @@ pre code {
 }
 
 @media (max-width: 576px) {
-  .container {
-    max-width: 100%;
-  }
   .one {
     margin-left: 25%;
     width: 50%;
@@ -626,7 +623,7 @@ pre code {
 
 @media (min-width: 992px) {
   .one {
-    
+
     float: left;
   }
 
