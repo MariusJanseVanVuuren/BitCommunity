@@ -50,6 +50,41 @@
                 font-weight: bold;
             }
 
+            @media (min-width: 300px) {
+              .top-right {
+                  position: absolute;
+                  right: auto;
+                  top: 18px;
+              }
+
+              .title {
+                font-size: 2em;
+              }
+            }
+
+            @media (min-width: 768px) {
+              .title {
+                font-size: 3em;
+              }
+            }
+
+            @media (min-width: 992px) {
+              .title {
+                font-size: 5em;
+              }
+              .top-right {
+                  position: absolute;
+                  right: 10px;
+                  top: 18px;
+              }
+            }
+
+            @media (min-width: 1200px) {
+              .title {
+                font-size: 6em;
+              }
+            }
+
             a {
                 border-radius: 2rem;
                 color: #fff;
