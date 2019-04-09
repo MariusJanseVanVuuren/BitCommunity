@@ -10,8 +10,8 @@
         <p>{{ Auth::user()->email }}<p>
 
         <a class="href-primary" style="text-transform: none; margin:1rem;" href='{{ route('profile.edit') }}'>Edit your profile</a>
-        <!-- <br><br> -->
-        <!-- <a class="href-primary" style="text-transform: none; margin:1rem;" href='{{ route('profile.change_password') }}'>Change your password</a> -->
+        <br><br>
+        <a class="href-primary" style="text-transform: none; margin:1rem;" href='{{ route('profile.change_password') }}'>Change your password</a>
     </div>
 </div>
 @endsection
