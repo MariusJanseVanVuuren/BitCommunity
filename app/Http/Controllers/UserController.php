@@ -38,8 +38,20 @@ class UserController extends Controller {
    }
 
    public function viewFriends() {
+
+     $users = User::all();
+     $potential_friends = $users->filter(function ($potential_friend) {
+       $current_user = Auth::user();
+       if ($potential_friend->id !=  $current_user->id) {
+          if ($current_user->friends()->where('id', $potential_friend->id)->count() == 0) {
+            return $potential_friend;//filter
+          }
+       }
+     })->values();
+
+
      $friends = Auth::user()->friends;
-     return view('friends', ['friends' => $friends]);
+     return view('friends', ['friends' => $friends, 'potential_friends' => $potential_friends]);
    }
 
 }
