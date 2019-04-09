@@ -23,7 +23,24 @@ class PostController extends Controller {
     */
      public function index()
      {
-       $posts = Post::orderBy('created_at', 'desc')->get();
-       return view('home', ['posts' => $posts]);
+       $users = User::all();
+       $friends = $users->filter(function ($potential_friend) {
+         $current_user = Auth::user();
+         if ($potential_friend->id !=  $current_user->id) {
+            if ($current_user->friends()->where('id', $potential_friend->id)->count() == 0) {
+              return $potential_friend;//filter
+            }
+         }
+       })->values();
+
+
+       $posts = Post::orderBy('created_at', 'desc')->get()->filter(function ($post) {
+         $current_user = Auth::user();
+         if (($post->user->id == $current_user->id) ||
+             ($current_user->friends()->where('id', $post->user->id)->count() != 0)) {
+           return $post;
+         }
+       });
+       return view('home', ['posts' => $posts, 'friends' => $friends]);
      }
 }

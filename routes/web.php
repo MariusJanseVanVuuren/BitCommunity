@@ -25,6 +25,13 @@ Route::post('/createpost', [
     'middleware' => 'auth'
 ]);
 
+
+Route::post('/befriend', [
+    'uses' => 'UserController@befriend',
+    'as' => 'user.befriend',
+    'middleware' => 'auth'
+]);
+
 Route::get('/profile', [
     'uses' => 'ProfileController@view',
     'as' => 'profile.view',

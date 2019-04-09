@@ -1,3 +1,4 @@
+@extends('layouts.app')
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -79,22 +80,21 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right">
-                    @auth
-                        <a class="href-primary links" href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a class="href-primary links" href="{{ route('login') }}">Login</a>
-                        @if (Route::has('register'))
-                            <a class="links" href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
                 <div>
                   <img src="img/Social.png" height="20%" width="20%" />
+                  @if (Route::has('login'))
+                      <div style="margin:2rem;">
+                          @auth
+                              <a class="href-primary links" href="{{ url('/home') }}">Home</a>
+                          @else
+                              <a class="href-primary links" href="{{ route('login') }}">Login</a>
+                              @if (Route::has('register'))
+                                  <a class="links" href="{{ route('register') }}">Register</a>
+                              @endif
+                          @endauth
+                      </div>
+                  @endif
                 </div>
                 <div class="title m-b-md">
                     BitCommunity
