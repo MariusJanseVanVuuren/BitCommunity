@@ -58,6 +58,9 @@
                                     <a class="dropdown-item" href="{{ route('profile.view') }}">
                                       Profile
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('user.viewFriends') }}">
+                                      Friends
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

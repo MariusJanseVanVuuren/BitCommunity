@@ -25,6 +25,17 @@ Route::post('/createpost', [
     'middleware' => 'auth'
 ]);
 
+Route::get('/viewFriends', [
+    'uses' => 'UserController@viewFriends',
+    'as' => 'user.viewFriends',
+    'middleware' => 'auth'
+]);
+
+Route::post('/dropFriend', [
+    'uses' => 'UserController@dropFriend',
+    'as' => 'user.dropFriend',
+    'middleware' => 'auth'
+]);
 
 Route::post('/befriend', [
     'uses' => 'UserController@befriend',

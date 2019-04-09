@@ -24,5 +24,22 @@ class UserController extends Controller {
      return redirect()->route('home');
    }
 
+   public function dropFriend(Request $request) {
+     $users = User::all();
+     $friend_id = $request['requested_friend_id'];
+     $friend = $users->filter(function ($user) use($friend_id) {
+       if ($user->id == $friend_id) {
+         return $user;
+       }
+     })->values()->first();
+
+     Auth::user()->removeFriend($friend);
+     return redirect()->route('home');
+   }
+
+   public function viewFriends() {
+     $friends = Auth::user()->friends;
+     return view('friends', ['friends' => $friends]);
+   }
 
 }
