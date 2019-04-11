@@ -2,15 +2,15 @@
 
 @section('content')
 <div class="container">
-  <div class="one">
-      <img src="img/Social.png" height="200px" width="200px" />
-      <div style="margin-top:20px;">
-        <p class="fancy-underline">For developers</p>
-        <p class="fancy-underline">For designers</p>
-        <p class="fancy-underline">To collaborate</p>
+  <div class="left-section">
+      <div style="text-align: center; margin-top:20px;">
+        <img src="img/Social.png" height="200px" width="200px" />
+        <p class="content-title">For developers</p>
+        <p class="content-title">For designers</p>
+        <p class="content-title">To collaborate</p>
       </div>
   </div>
-  <div class="two">
+  <div class="right-section">
       <div class="justify-content-center">
           <div class="col-md-8">
               <div class="card">

@@ -20,7 +20,7 @@
     </div>
 </div>
 
-<div class="friend-section">
+<div class="left-section">
   <div class="card-header" style="margin-bottom:10px; border-radius:10rem;">Potential friends</div>
   @foreach ($friends as $friend)
   <article class="post" data-postid="{{ $friend->id }}">
@@ -44,7 +44,7 @@
   @endif
 </div>
 
-<div class="post-section">
+<div class="right-section">
     <div class="card">
         <div class="card-header">New ideas from cool people</div>
         <div class="card-body">

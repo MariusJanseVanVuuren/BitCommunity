@@ -472,6 +472,12 @@ mark,
   background-color: #fcf8e3;
 }
 
+.content-title {
+  font-size: 2em;
+  color: #3F598C;
+  font-weight: bold;
+}
+
 .title {
     font-size: 6em;
     color: #3F598C;
@@ -632,35 +638,28 @@ pre code {
     margin: auto;
 }
 
-.friend-section {
+.left-section {
     width:80%;
     margin-left: 10%;
 }
 
-.post-section {
+.right-section {
   width:80%;
   margin-left: 10%;
 }
 
 @media (min-width: 900px) {
-  .friend-section {
+  .left-section {
     width:25%;
     float:left;
     margin-left: 1rem;
   }
 
-  .post-section {
+  .right-section {
     width:70%;
     margin-left: 30%;
     margin-right: 1rem;
   }
-}
-
-.one {
-    width: 25%;
-}
-.two {
-    margin-left: 25%;
 }
 
 .fancy-underline {
@@ -681,28 +680,6 @@ pre code {
   }
 }
 
-@media (max-width: 576px) {
-  .one {
-    margin-left: 25%;
-    width: 50%;
-  }
-  .two {
-      width: 100%;
-      margin: auto;
-  }
-}
-
-@media (min-width: 992px) {
-  .one {
-
-    float: left;
-  }
-
-  .container {
-    max-width: 960px;
-  }
-
-}
 
 @media (min-width: 1200px) {
   .container {
