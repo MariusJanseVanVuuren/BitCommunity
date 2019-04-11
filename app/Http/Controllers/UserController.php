@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\User;
+use App\FriendsUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -19,8 +20,20 @@ class UserController extends Controller {
          return $user;
        }
      })->values()->first();
-
      Auth::user()->addFriend($friend);
+     return redirect()->route('home');
+   }
+
+   public function acceptFriend(Request $request) {
+     $friendUsers = FriendsUser::all();
+     $friend_id = $request['requesting_friend_id'];
+     $friend = $friendUsers->filter(function ($user) use($friend_id) {
+       if ($user->friend_id == 2) {
+         return $user;
+       }
+     })->values()->first();
+     $friend->update(['approved' => True]);
+     $friend->save();
      return redirect()->route('home');
    }
 
@@ -32,7 +45,6 @@ class UserController extends Controller {
          return $user;
        }
      })->values()->first();
-
      Auth::user()->removeFriend($friend);
      return redirect()->route('home');
    }

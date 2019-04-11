@@ -31,6 +31,12 @@ Route::get('/viewFriends', [
     'middleware' => 'auth'
 ]);
 
+Route::post('/acceptFriend', [
+    'uses' => 'UserController@acceptFriend',
+    'as' => 'user.acceptFriend',
+    'middleware' => 'auth'
+]);
+
 Route::post('/dropFriend', [
     'uses' => 'UserController@dropFriend',
     'as' => 'user.dropFriend',
